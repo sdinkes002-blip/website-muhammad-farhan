@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Ucapan Ulang Tahun Ayu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+            font-family: 'Segoe UI', sans-serif;
+            overflow: hidden;
+        }
+        section {
+            width: 100%;
+            height: 100vh;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            color: #333;
+            position: relative;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        section.active {
+            display: flex;
+            opacity: 1;
+        }
+        .box {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            animation: fadeIn 1.2s ease;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ff4081;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .btn {
+            padding: 10px 25px;
+            font-size: 1em;
+            border: none;
+            border-radius: 25px;
+            background: #ff4081;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #e73370;
+        }
+
+        /* Animasi fade in */
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(30px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        /* Dekorasi */
+        .dekorasi {
+            position: absolute;
+            width: 100px;
+            opacity: 0.4;
+            animation: floating 5s infinite ease-in-out;
+        }
+
+        .dekorasi1 {
+            top: 20px; left: 20px;
+        }
+        .dekorasi2 {
+            bottom: 20px; right: 30px;
+            animation-delay: 2s;
+        }
+        .dekorasi3 {
+            top: 50%; right: 10%;
+            transform: translateY(-50%);
+            animation-delay: 1s;
+        }
+
+        @keyframes floating {
+            0% {transform: translateY(0);}
+            50% {transform: translateY(-20px);}
+            100% {transform: translateY(0);}
+        }
+        .dekorasi {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+}
+
+.dekorasi:hover {
+    transform: scale(1.1);
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Audio -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="mp3/2.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung pemutar audio.
+    </audio>
+
+  <!-- Halaman 1 -->
+<section id="page1" class="active" style="background-image: linear-gradient(135deg, #ff9a9e, #fad0c4); position: relative; overflow: hidden;">
+    <!-- Dekorasi Gambar: Balon & Konfeti -->
+    <img src="img/1.jpg" class="dekorasi dekorasi1" alt="Balon" style="top: 20px; left: 20px;">
+    <img src="img/2.jpg" class="dekorasi dekorasi2" alt="Konfeti" style="top: 50px; right: 30px;">
+    <img src="img/3.jpg" class="dekorasi dekorasi3" alt="Konfeti" style="bottom: 40px; left: 40px;">
+    <img src="img/4.jpg" class="dekorasi dekorasi4" alt="Balon" style="bottom: 10px; right: 10px;">
+    <!-- Kotak Ucapan -->
+    <div class="box" style="z-index: 1;">
+        <h1>🎉 Halo Ayu Sri Astrian S.Kom 🎉</h1>
+        <p>Selamat datang di hari spesialmu. Yuk, kita rayakan bersama 🎂</p>
+        <button class="btn" onclick="nextPage(2)">Lanjut ➡</button>
+    </div>
+</section>
+
+
+    <!-- Halaman 2 -->
+    <section id="page2" style="background-image: linear-gradient(135deg, #a18cd1, #fbc2eb);">
+    <img src="img/1.jpg" class="dekorasi dekorasi1" alt="Balon" style="top: 20px; left: 20px;">
+    <img src="img/2.jpg" class="dekorasi dekorasi2" alt="Konfeti" style="top: 50px; right: 30px;">
+    <img src="img/3.jpg" class="dekorasi dekorasi3" alt="Konfeti" style="bottom: 40px; left: 40px;">
+    <img src="img/4.jpg" class="dekorasi dekorasi4" alt="Balon" style="bottom: 10px; right: 10px;">
+
+        <div class="box">
+            <h1>🎓 Selamat Ulang Tahun dan Wisuda 🎓</h1>
+            <p>Selamat ulang tahun Ayu Sri Astrianku Semoga sehat selalu, bahagia, dan semua impianmu tercapai.</p>
+            <p>Selamat juga atas gelar <strong>Sarjana Komputer</strong>-mu dan mungkin Ini adalah awal dari perjalanan baru yang akan luar biasa kedepannya.💻🌟</p>
+            <p>kumudian Terima kasih untuk Ayah dan Ibu tercinta yang selalu mendukung dan mendoakan tanpa lelah. Tanpa mereka, semua ini tak mungkin terjadi. ❤️</p>
+            <button class="btn" onclick="nextPage(3)">Lanjut ➡</button>
+        </div>
+    </section>
+
+    <!-- Halaman 3 -->
+    <section id="page3" style="background-image: linear-gradient(135deg, #84fab0, #8fd3f4);">
+    <img src="img/1.jpg" class="dekorasi dekorasi1" alt="Balon" style="top: 20px; left: 20px;">
+    <img src="img/2.jpg" class="dekorasi dekorasi2" alt="Konfeti" style="top: 50px; right: 30px;">
+    <img src="img/3.jpg" class="dekorasi dekorasi3" alt="Konfeti" style="bottom: 40px; left: 40px;">
+    <img src="img/4.jpg" class="dekorasi dekorasi4" alt="Balon" style="bottom: 10px; right: 10px;">
+        <div class="box">
+            <h1>🎊 Hari Ini Milikmu 🎊</h1>
+            <p>Nikmati setiap detik kebahagiaanmu, karena kamu pantas mendapatkannya. Jadilah pribadi yang terus bersinar dan rendah hati.</p>
+            <p>Semoga langkahmu selalu dipermudah, dan rezekimu diluaskan. Aamiin. 💖</p>
+            <button class="btn" onclick="backToStart()">🔁 Ulang Lagi</button>
+        </div>
+    </section>
+
+    <!-- Script -->
+    <script>
+        function nextPage(pageNumber) {
+            document.querySelectorAll("section").forEach(section => {
+                section.classList.remove("active");
+            });
+            document.getElementById(`page${pageNumber}`).classList.add("active");
+        }
+
+        function backToStart() {
+            nextPage(1);
+        }
+
+        // Autoplay untuk beberapa browser yang memblokir
+        window.addEventListener("click", () => {
+            const bgMusic = document.getElementById("bgMusic");
+            if (bgMusic.paused) {
+                bgMusic.play().catch(e => {
+                    console.log("Autoplay gagal: ", e);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
